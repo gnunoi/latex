@@ -1,0 +1,34 @@
+\documentclass{ctexart}
+
+% 第一个命令，设置较大的字号
+\newcommand{\setsizeone}{
+  \renewcommand{\normalsize}{\fontsize{28}{32}\selectfont}
+  \renewcommand{\small}{\fontsize{24}{14}\selectfont}
+  \renewcommand{\large}{\fontsize{32}{36}\selectfont}
+  \renewcommand{\Large}{\fontsize{36}{44}\selectfont}
+}
+
+% 第二个命令，设置较小的字号
+\newcommand{\setsizetwo}{
+  \renewcommand{\normalsize}{\fontsize{10}{12}\selectfont}
+  \renewcommand{\small}{\fontsize{8}{10}\selectfont}
+  \renewcommand{\large}{\fontsize{12}{14}\selectfont}
+  \renewcommand{\Large}{\fontsize{14}{17}\selectfont}
+}
+
+\setsizetwo
+
+\begin{document}
+
+% 默认字号
+这是默认的字号
+
+% 执行第一个命令，设置较大的字号
+\setsizeone
+这是第一个命令设定的较大字号。
+
+% 执行第二个命令，设置较小的字号
+\setsizetwo
+这是第二个命令设定的较小字号
+
+\end{document}

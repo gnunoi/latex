@@ -1,0 +1,17 @@
+\documentclass[border=4pt]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+
+ % define the plot style and the axis style
+%\tikzset{elegant/.style={smooth,thick,samples=500,magenta}} %samples设置采样点数量
+
+\begin{document}
+
+% 两个配对的循环变量
+\begin{tikzpicture}
+    \draw[-latex] (0,-1)--(0,2);
+    \draw[-latex] (-4,0)--(4,0);
+    \foreach \x/\y in {-3/1,-2/0,-1/1,0/1,1/1,2/2,3/1} \draw[-Circle] (\x,0)--++(0,\y);
+\end{tikzpicture}
+
+\end{document}

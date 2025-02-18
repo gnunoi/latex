@@ -1,0 +1,15 @@
+\documentclass{ctexbook}
+\usepackage{ctex}
+\usepackage{tikz}
+%\usepackage{amsmath}
+%\usetikzlibrary{calc}
+
+\begin{document}
+\begin{tikzpicture}
+\foreach[count=\i] \x in {20,18,...,2} %count=\i，则变量\i用于计数
+    \foreach[count=\j] \y in {20,18,...,2}
+        \node at (\i,\j) {\x\y};
+\end{tikzpicture}
+
+\end{document}
+

@@ -1,0 +1,18 @@
+\documentclass[border=4pt]{standalone}
+
+\usepackage{tikz}
+\usetikzlibrary{angles}
+\usetikzlibrary{quotes}
+%\usepackage{mathpazo}
+%\usepackage{pgfplots}
+
+ % define the plot style and the axis style
+\tikzset{elegant/.style={smooth,thick,samples=500,magenta}} %samples设置采样点数量
+
+\begin{document}
+
+\begin{tikzpicture}
+	\draw [black] (5,0) coordinate(A) -- (0,0) coordinate(B) -- (5,5) coordinate(C)  pic [draw=red, "$\alpha$", angle eccentricity=1.5] {angle} ;
+	\node [below left] (a) at (0,0) {B};
+\end{tikzpicture}
+\end{document}

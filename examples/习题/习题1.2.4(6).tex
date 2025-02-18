@@ -1,0 +1,17 @@
+\documentclass[tikz,border=2mm]{standalone}
+\tikzset{global scale/.style={
+    	scale=#1,
+    	every node/.append style={scale=#1}
+  	}
+}
+\begin{document}
+	\begin{tikzpicture}[global scale = 0.5]
+		\draw [black,  -latex] (-2,-5) -- (2,-5); 
+		\foreach \x in {-1, ..., 1}
+			\draw (\x cm,-5cm+2pt) -- (\x cm,-5cm+0pt) node[anchor=north] {$\x$};
+		% -8, -6, -5, 0.1, -1/4, 0, -4.2, -5.1, 2/3, 3/2, +1/5, 0
+		\draw [blue, fill=blue] (1/5, -5) circle(2pt) node [above] {$+\frac{1}{5}$}; 
+		\draw [green, fill=green] (0, -5) circle(2pt) node [above] {$0$}; 	
+					 			
+	\end{tikzpicture}    
+\end{document}

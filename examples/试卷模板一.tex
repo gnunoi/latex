@@ -1,0 +1,243 @@
+\documentclass[UTF8,twoside,openright]{ctexbook}
+\usepackage{titlesec} 
+\titleformat{\chapter}{\centering\Huge\bfseries}{第\,\chinese{chapter}\,章}{1em}{}
+\titleformat{\section}[block]{\centering\Large\bfseries}{第 ~\thesection~讲}{1em}{}[]
+
+%\definecolor{mybackground}{rgb}{0.99, 0.91, 0.95} % 淡紫
+\renewcommand*{\thesection}{\arabic{section}}
+\usepackage{tasks}%选择题宏包，tasks环境
+% texlive 2021 用以下设置
+%=====================================
+\settasks{                           %
+    label=\Alph*.,                   %
+    label-offset={0.4em},            %
+    label-align=left,                %
+    column-sep={10pt},               %
+    label-width=2ex,                 %
+    item-indent={40pt},              %
+    before-skip={-0.7em},            %
+    after-skip={-0.7em}              %
+    }                                %
+%=====================================
+
+%============================================会让\begin{enumerate}的子集列表间距收缩
+\usepackage{color}
+\usepackage[dvipsnames,svgnames]{xcolor}
+\usepackage{enumerate}
+% list/itemize/enumerate setting
+\usepackage[shortlabels,inline]{enumitem}
+\setlist{nolistsep} 
+
+\usepackage{textcircle-cid}
+\newfontfamily\koz{KozMinPr6N-Regular.otf}
+\newcommand{\quan}[1]{\raisebox{-0.05em}{\koz\CIDtextcircled{#1}}}
+\newcommand{\hquan}[1]{\raisebox{-0.05em}{\koz\CIDtextblackcircled{#1}}}
+\newcommand{\fquan}[1]{\raisebox{-0.05em}{\koz\CIDtextboxed{#1}}}
+\newcommand{\hfquan}[1]{\raisebox{-0.05em}{\koz\CIDtextblackboxed{#1}}}
+\usepackage{etoolbox}
+\robustify{\quan}
+\robustify{\hquan}
+\robustify{\fquan}
+\robustify{\hfquan}
+\newenvironment{zuoye}{
+\begin{enumerate}
+[
+labelindent=0mm,
+align=left,
+labelwidth=1.5em,
+itemsep=2em,
+labelsep=0em,
+leftmargin=1.5em,
+label={\textcolor{cyan}{\hfquan{\arabic*}}}]
+}
+{\end{enumerate}}
+
+\usepackage{geometry}
+\geometry{a4paper,top=3cm,bottom=2.5cm,left=2cm,right=2cm} 
+
+\begin{document}
+\definecolor{mybackground}{rgb}{0.99, 0.91, 0.95} % 淡紫
+\pagecolor{mybackground}
+
+\chapter{集合的章节}
+
+\section{集合的基本概念}
+
+\begin{zuoye}
+
+    \item 已知函数~$f(x)=a(x-1)-\sin x(a>0)$ 恰有两个零点~$x_{1} $，$x_{2} $，且~$x_{1} <x_{2} $，则~$x_{1} -\tan x_{1} =$~(\quad)
+\begin{tasks}(4)
+    \task $2$ \task $-2$ \task $-1$ \task $1$
+\end{tasks}
+
+\item 设函数$f(x)=
+\begin{cases}
+{2^{x},x\leq 0} \\
+ {\log_{2} x,x>0} \\
+\end{cases}
+$，函数$y=f(f(x))-1$的零点个数为~(\quad)
+\begin{tasks}(4)
+    \task $3$ \task $4$ \task $6$ \task $12$
+\end{tasks}
+
+\item 已知实数~$a$，$b$ 满足~$2^{a}=3$，$3^{b}=2$，则函数~$f(x)=a^{x}+x-b$ 的零点所在的区间是~(\quad)
+\begin{tasks}(4)
+    \task $(-2, -1)$ \task $(-1,0)$ \task $(0,1)$ \task $(1,2)$
+\end{tasks}
+
+\item 函数~$f(x)=mx^{2}-2x+1$ 有且仅有一个正实数零点，则实数~$m$ 的取值范围是~(\quad)
+\begin{tasks}(4)
+    \task $(-\infty, 1]$ \task $(-\infty, 0] \cup \{1\}$ \task $(-\infty,0)\cup (0,1]$ \task $(-\infty,1)$
+\end{tasks}
+
+\item 若~$f(x)$ 为奇函数，且~$x_{0} $ 是~$y=f(x)-e^{x}$ 的一个零点，则~$-x_{0}
+$ 一定是下列哪个函数的零点~(\quad)
+\begin{tasks}(2)
+    \task $y=f(x)e^{x}+1$ \task $y=f(-x)e^{-x}-1$
+    \task $y=f(x)e^{x}-1$ \task $y=f(-x)e^{-x}+1$
+\end{tasks}
+
+\item 已知二次函数~$f(x)=x^{2}+bx+c$ 的两个零点分别在区间~$(-2,-1)$ 和~$(-1,0)$ 内，则~$f(3)$ 的取值范围是~(\quad)
+\begin{tasks}(4)
+    \task $(12,20)$ \task $(12,18)$ \task $(18,20)$ \task $(8,18)$
+\end{tasks}
+
+\item 已知函数~$f(x)=\log_{2}(ax^{2}+2x+3)$，若对于任意实数~$k$，总存在实数~$x_{0} $，使得~$f(x_{0}
+)=k$ 成立，则实数~$a$ 的取值范围是~(\quad)
+\begin{tasks}(2)
+    \task $[-1.\frac{1}{3})$ \task $[0,\frac{1}{3}]$
+    \task $[3,+\infty )$ \task $(-1,+\infty)$
+\end{tasks}
+
+\item 已知函数~$f(x)=|\ln x|-a^{x}(x>0$，$0<a<1)$ 的两个零点是~$x_{1} $，$x_{2}
+$，则~(\quad)
+\begin{tasks}(4)
+    \task $0<x_{1} x_{2} <1$ \task $x_{1} x_{2} =1$
+    \task $1<x_{1} x_{2} <e$ \task $x_{1}x_{2} >e$
+\end{tasks}
+
+
+\item 已知函数~$f(x)=e^{x-1}+4x-4$，$g(x)=\ln x-\frac{1}{x}$，若~$f(x_{1}
+)=g(x_{2} )=0$，则~(\quad)
+\begin{tasks}(2)
+    \task $0<g(x_{1} )<f(x_{2} )$ \task $f(x_{2} )<g(x_{1} )<0$
+    \task $f(x_{2} )<0<g(x_{1} )$ \task $g(x_{1} )<0<f(x_{2} )$
+\end{tasks}
+
+\item 已知函数$f(x)=
+\begin{cases}
+{x^{2}+4x,x\leq 0} \\
+ {x\ln x,x>0} \\
+\end{cases}
+$，$g(x)=kx-1$，若方程~$f(x)-g(x)=0$在$x\in
+(-$2，$e)$ 时有~3 个实数根，则~$k$ 的取值范围为~(\quad)
+\begin{tasks}(2)
+    \task $(1,1+\frac{1}{e})\cup [\frac{3}{2},2) $
+    \task $(1+\frac{1}{e},\frac{3}{2}) $
+    \task $(\frac{3}{2},2) $
+    \task $(1,1+\frac{1}{e})\cup (\frac{3}{2},2)$
+\end{tasks}
+
+\item 函数$f(x)=\frac{2}{x-1}+\ln \frac{1}{x}$的零点所在的大致区间是~(\quad)
+\begin{tasks}(4)
+    \task $(0, 1) $ \task $ (1, 2)$
+    \task $(2, 3) $ \task $(0, 1),(2, 3) $
+\end{tasks}
+
+\item 函数~$f(x)=2x^{6}-x^{4}-1$ 的零点个数是~(\quad)
+\begin{tasks}(4)
+    \task $4$ \task $2$
+    \task $1$ \task $0$
+\end{tasks}
+
+\item 已知~$[x]$ 表示不超过$x$的最大整数，当~$x\in
+\mathbf{R}$ 时，称~$y=[x]$ 为取整函数，例如~$[1.6]=1$，$[-3.3]=-4$，若~$f(x)=[x]$，$g(x)$ 的图象关于~$y$ 轴对称，且当~$x\leq
+0$ 时，$g(x)=-x^{2}-2x$，则方程~$f(f(x))=g(x)$ 解的个数为~(\quad)
+\begin{tasks}(4)
+    \task $1 $ \task $2$
+    \task $3$ \task $4$
+\end{tasks}
+
+\item 已知函数~$f(x)=
+\begin{cases}
+ {|\log_{3} x|,0<x\leq 3} \\
+ {\frac{1}{3}x^{2}-\frac{10}{3}x+8,x>3} \\
+\end{cases}
+$，若方程~$f(x)=m(m\in
+\textbf{R})$ 有四个不同的实根~$x_{1} $，$x_{2} $，$x_{3} $，$x_{4}
+$，且满足~$x_{1} <x_{2} <x_{3} <x_{4} $，则~$\frac{(x_{3} -3)(x_{4} -3)}{x_{1}
+x_{2} }$ 的取值范围是~(\quad)
+\begin{tasks}(4)
+    \task $(0,4]$ \task $(0,3) $
+    \task $ (3,4]$ \task $(1,3) $
+\end{tasks}
+
+\item 已知定义在~$\mathbf{R}$ 上的偶函数~$f(x)$ 满足~$f(x)-f(2-x)=0$，且当~$x\in
+[0,1]$ 时，有~$f(x)=-x^{2}+1$，若函数~$g(x)=f(x)-\log_{a}
+(2|x|+1)$($a>0$，且~$a\ne 1$) 存在~10 个零点，则实数~$a$ 的取值范围是~(\quad)
+\begin{tasks}(4)
+    \task $(7,11)$ \task $(9,13)$
+    \task $(7,13)$ \task $(9,11)$
+\end{tasks}
+
+\item 已知~$f(x)=|xe^{x}{\rm |}$，又$g(x)=[f(x)]^{2}+tf(x)(t\in
+\textbf{R}$)，若关于~$x$ 的方程~$g(x)=-1$ 有四个不同的实根，则实数$t$的取值范围为~(\quad)
+\begin{tasks}(2)
+    \task $(-\infty,-\frac{e^{2}+1}{e}) $
+    \task $(\frac{e^{2}+1}{e},+\infty) $
+    \task $ (-\frac{e^{2}+1}{e},-2)$
+    \task $(2,\frac{e^{2}+1}{e})$
+\end{tasks}
+
+\item 已知函数~$f(x)=
+\begin{cases}
+{(x-2)\times |2^{x}-1|,x<2} \\
+ {3-\frac{3}{x-1},x>2} \\
+\end{cases}
+ $，若函数~$g(x)=f(x)-mx+2m$ 有三个不同的零点，则实数~$m$ 的取值范围为~(\quad)
+ \begin{tasks}(4)
+    \task $ (-1,0)$ \task $(0,1)$
+    \task $(-1,1)$ \task $(1,3)$
+\end{tasks}
+
+\item 定义函数~$f(x)=
+\begin{cases}
+ {4-8|x-\frac{3}{2}|,1\leq x\leq 2}  \\
+ {\frac{1}{2}f(\frac{x}{2}),x>2}  \\
+\end{cases}
+$，则函数~$g(x)=xf(x)-6$ 在区间~$[1, 2^{n}](n\in
+\mathbf{N}^{\ast})$ 内所有零点的和为~(\quad)
+\begin{tasks}(4)
+    \task $ n$
+    \task $2n$
+    \task $ \frac{3}{4}(2^{n}-1)$
+    \task $\frac{3}{2}(2^{n}-1) $
+\end{tasks}
+
+\item 已知函数~$f(x)=\log_{3}
+(a-3^{x})+x-2$，若~$f(x)$ 存在零点，则实数$a$的取值范围
+是~\underline{\qquad}
+
+\item 已知函数~$f(x)=(x+1)e^{x}-ax$ 在区间~$[-3,-1]$ 上为减函数，当实数~$a$ 取最小值时，函数~$f(x)$ 的零点个数为\underline{\qquad}．
+
+\item 已知函数~$f(x)=x^{2}-2x\sin \frac{\pi
+}{2}x+1$ 的两个零点分别为~$a$，$b$，则~$a+b=$\underline{\qquad}．
+
+\item 已知~$f(x)=x\ln x-\frac{k}{x}(k\in
+\mathbf{R})$，其图象与~$x$ 轴交于不同的两点~$A(x_{1} ,0)$，$B(x_{2},0)$，且~$x_{1} <x_{2}$．
+
+(1)求实数$k$的取值范围；
+
+(2)证明：$x_{1} +x_{2} <\frac{2}{\sqrt{{\rm e}}}$．
+
+\item 已知函数~$f(x)=ax^{2}-bx+\ln x$，$a$，$b\in \mathbf{R}$．
+
+(1)当$b=2a+$1时，讨论函数$f(x)$的单调性；
+
+(2)当$a=$1，$b>$3时，记函数$f(x)$的导函数${f}'(x)$的两个零点分别是~$x_{1}
+$和~$x_{2} (x_{1} <x_{2} )$，求证：$f(x_{1} )-f(x_{2}
+)>\frac{3}{4}-\ln 2$．
+
+%\end{enumerate}
+\end{zuoye}
+\end{document}

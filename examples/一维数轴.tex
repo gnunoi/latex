@@ -1,0 +1,11 @@
+\documentclass[tikz,border=2mm]{standalone}
+\begin{document}
+	\begin{tikzpicture}
+  		\draw [black, thick, ->, >=stealth] (-10,0) -- (10,0); % ->箭头，,>=stealth：实心箭头
+		%\foreach \x in {-9, -8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
+		\foreach \x in {-9, ..., 9}
+			\draw (\x cm,2pt) -- (\x cm,-2pt) node[anchor=north] {$\x$};
+		\draw [blue, fill=blue] (3.2, 0) circle(2pt) node [above] {$A$}; %在(3.2, 0)处绘制2pt的实心圆，并在上方标注A。
+		\draw [red, fill=red] (-3.2, 0) circle(2pt) node [above, red] {$B$}; %在(-3.2, 0)处绘制2pt的实心圆，并在上方标注B。
+	\end{tikzpicture}    
+\end{document}

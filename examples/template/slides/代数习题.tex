@@ -1,0 +1,81 @@
+%!TEX program = xelatex
+<<<<<<< HEAD
+\documentclass[t]{ctexbeamer} %[t]：正文顶端对齐
+=======
+\documentclass[aspectratio=169]{ctexbeamer}
+>>>>>>> 83c71ceec8a941d3ba155816bedbebfad4342ae2
+\usepackage{geometry}
+%\geometry{paperwidth=320mm, paperheight=180mm}
+\usepackage{ctex}
+\usepackage{tikz}
+\usepackage{amsmath}
+
+\usepackage{fontspec}
+\setmainfont{Times New Roman} %设置默认衬线字体
+\setsansfont{Arial} %设置默认无衬线字体
+\setmonofont{Courier New} %设置等宽字体
+
+\setbeamerfont{title}{size=\fontsize{60}{72}\selectfont} %设置title的字体字号
+\setbeamerfont{subtitle}{size=\fontsize{36}{48}\selectfont} %设置subtitle的字体字号
+\setbeamerfont{author}{size=\fontsize{24}{36}\selectfont} %设置author的字体字号
+\setbeamerfont{date}{size=\fontsize{24}{36}\selectfont} %设置date的字体字号
+\setbeamerfont{frametitle}{size=\fontsize{36}{48}\selectfont} %设置frametitle的字体字号
+\setbeamerfont{framesubtitle}{size=\fontsize{20}{30}\selectfont} %设置framesubtitle的字体字号
+\setbeamerfont{definition}{size=\fontsize{36}{48}\selectfont} %设置definition的字体字号
+\setbeamerfont{problem}{size=\fontsize{36}{48}\selectfont} %设置problem的字体字号
+\setbeamertemplate{normal text}{\fontsize{24}{36}\selectfont} % 调整正文字号
+
+\begin{document}
+\title{代数习题讲解}
+\subtitle{为未知而教，为未来而学}
+\author{丁保华}
+\date{\today}
+\maketitle
+
+\begin{frame}[t]
+\frametitle{目录}
+\tableofcontents
+\end{frame}
+
+\section{数列}
+\begin{frame}
+\frametitle{斐波那契数列（Fibonacci sequence）}
+\framesubtitle{由意大利数学家莱昂纳多·斐波那契（Leonardo Fibonacci）在1202年提出。 \textit{又称：兔子数列。}}
+\vspace{1cm}
+\begin{definition}
+\[
+\begin{aligned}
+&F(0)=0 \\
+&F(1)=1 \\
+&F(2)=2 \\
+&\cdots \\
+&F(n)=F(n-1)+F(n-2)
+\end{aligned}
+\]
+\end{definition}
+
+\begin{examples}
+\[
+\begin{aligned}
+&1, 2, 3, 5, 8, \cdots
+\end{aligned}
+\]
+\end{examples}
+
+\end{frame}
+
+
+\section{习题}
+\begin{frame}
+\frametitle{习题1.1及讲解}
+\begin{problem}
+\[
+x^2+2x+1=0
+\]
+\end{problem}
+
+\end{frame}
+
+
+
+\end{document}

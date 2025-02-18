@@ -1,0 +1,11 @@
+\documentclass{article}
+\usepackage{tikz}
+
+\begin{document}
+\begin{tikzpicture}
+  \draw (0,0) -- (2,2); % 绘制一条直线
+  \pgfgetlastxy{\xcoord}{\ycoord} % 获取直线终点坐标
+  \node at (3,1) {x坐标: \xcoord}; % 显示x坐标
+  \node at (3,0) {y坐标: \ycoord}; % 显示y坐标
+\end{tikzpicture}
+\end{document}

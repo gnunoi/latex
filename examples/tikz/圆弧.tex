@@ -1,0 +1,11 @@
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{patterns}
+
+\begin{document}
+  \begin{tikzpicture}  
+    \draw (55:5) arc(55:65:5); %arc(起始角度、结束角度、半径)
+    \draw (5,0)++(115:5) arc(115:13:5); %arc(起始角度、结束角度、半径)
+    \draw (0,0) -- (5,0);
+  \end{tikzpicture}
+\end{document}

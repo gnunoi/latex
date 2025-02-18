@@ -1,0 +1,18 @@
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{calc} % 用于计算坐标
+
+\begin{document}
+
+\begin{tikzpicture}
+  % 定义一个节点并存储其坐标
+  \node (myNode) at (0,0)  {Hello};
+  
+  % 获取并使用该节点的坐标
+  \coordinate (xCoord) at (myNode); % 获取x坐标
+  \coordinate (yCoord) at (myNode|-|0,0); % 获取y坐标，使用|-|来获取垂直线上的点，然后获取其y坐标
+  
+  \draw (xCoord, yCoord) circle (0.5cm); % 使用坐标画圆
+\end{tikzpicture}
+
+\end{document}
