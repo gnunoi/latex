@@ -1,0 +1,8 @@
+.*
+*.*
+media
+__py__cache__
+!.gitignore
+!*.tex
+!*.sty
+!Makefile
