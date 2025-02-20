@@ -1,5 +1,0 @@
-.*
-!.gitignore
-media/*
-__pycache__/*
-works/cover.png
